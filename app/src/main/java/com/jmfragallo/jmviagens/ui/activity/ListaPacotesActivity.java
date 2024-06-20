@@ -2,15 +2,18 @@ package com.jmfragallo.jmviagens.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import com.jmfragallo.jmviagens.R;
 import com.jmfragallo.jmviagens.dao.PacoteDao;
 import com.jmfragallo.jmviagens.model.Pacote;
-import com.jmfragallo.jmviagens.ui.activity.adapter.ListaPacotesAdapter;
+
 
 import java.util.List;
+
+import br.com.alura.aluraviagens.ui.adapter.ListaPacotesAdapter;
 
 public class ListaPacotesActivity extends AppCompatActivity {
 
@@ -23,6 +26,9 @@ public class ListaPacotesActivity extends AppCompatActivity {
 
         setTitle(TITULO_APPBAR);
         configuraLista();
+
+        Intent intent = new Intent(this, ResumoPacoteActivity.class);
+        startActivity(intent);
     }
 
     private void configuraLista() {

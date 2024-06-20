@@ -1,4 +1,4 @@
-package com.jmfragallo.jmviagens.ui.activity.adapter;
+package br.com.alura.aluraviagens.ui.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -9,15 +9,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.jmfragallo.jmviagens.R;
-
-import java.util.List;
-
 import com.jmfragallo.jmviagens.model.Pacote;
 import com.jmfragallo.jmviagens.util.DiasUtil;
 import com.jmfragallo.jmviagens.util.MoedaUtil;
 import com.jmfragallo.jmviagens.util.ResourceUtil;
+
+import java.util.List;
 
 public class ListaPacotesAdapter extends BaseAdapter {
 
@@ -83,4 +81,5 @@ public class ListaPacotesAdapter extends BaseAdapter {
         TextView local = viewCriada.findViewById(R.id.item_pacote_local);
         local.setText(pacote.getLocal());
     }
+
 }
